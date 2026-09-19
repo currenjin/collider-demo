@@ -28,12 +28,18 @@ basePrice      10,000
 
 ## 할인 종류
 
-| 종류 | 필드 | 계산 |
+| 종류 | 필드 | 할인액 계산 |
 |---|---|---|
-| 쿠폰 | `couponAmount` | 정액 차감 |
-| 멤버십 | `membershipRate` | `basePrice × (1 - rate)` 만큼이 아니라, 할인액 = `basePrice × (1 - rate)` |
+| 쿠폰 | `couponAmount` | 그 값 그대로 |
+| 멤버십 | `membershipRate` | `basePrice × (1 - membershipRate)` |
 
-`membershipRate` 는 **적용 후 비율**이다. 0.9 는 10% 할인을 뜻한다.
+`membershipRate` 는 적용 후 비율이다. 0.9 는 10% 할인을 뜻한다.
+
+```
+basePrice 10,000 · membershipRate 0.9
+멤버십 할인액 = 10,000 × (1 - 0.9) = 1,000
+멤버십만 적용한 금액 = 10,000 - 1,000 = 9,000
+```
 
 ## 부가세
 
