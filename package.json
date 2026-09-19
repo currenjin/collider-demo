@@ -1,0 +1,13 @@
+{
+  "name": "freight-pricing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "운임 정산 — 견적 계산",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.1"
+  }
+}
