@@ -15,7 +15,9 @@ jobs:
     name: future collision check
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      # 리포트 SVG 를 collider-reports 브랜치에 올린다. GitHub 코멘트에 그림을
+      # 띄우려면 공개 주소가 필요한데, 레포에 두면 서버가 없어도 남는다.
+      contents: write
       pull-requests: write
 
     steps:
